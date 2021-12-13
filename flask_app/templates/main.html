@@ -1,0 +1,42 @@
+<html>
+    <body>
+    <center>
+        <br><br><br><br><br>
+        <h1> 뇌졸중 자가 진단 </h1>
+
+        <form method="POST", action="{{url_for('predict')}}">
+        <b>
+        성별 : <select name="성별">
+            <option value="">성별 선택</option>
+            <option value="Male">남</option>
+            <option value="Female">여</option>
+        </select><br><br>
+
+        나이 : <input type='number' step='1' name='나이' placeholder="나이 입력"><br><br>
+
+        고혈압 : <select name="고혈압">
+            <option value="">고혈압 여부</option>
+            <option value="1">있음</option>
+            <option value="0">없음</option>
+        </select><br><br>
+
+        심장질환 : <select name="심장질환">
+            <option value="">심장질환 여부</option>
+            <option value="1">있음</option>
+            <option value="0">없음</option>
+        </select><br><br>
+        
+        bmi : <input type='number' step='0.01' name='bmi' placeholder="bmi 입력"><br><br>
+
+        흡연 : <select name="흡연">
+            <option value="">흡연 여부</option>
+            <option value="smokes">흡연</option>
+            <option value="never smoked">비흡연</option>
+            <option value="formerly smoked">금연</option>
+        </select><br><br>
+        </b>
+            <input type="submit", value='제출'>
+        </form>
+    </center>
+    </body>
+</html>
